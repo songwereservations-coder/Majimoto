@@ -144,18 +144,31 @@
         <h2 class="text-3xl font-bold text-[#2C3E2F] text-center mb-4">Start Your Adventure</h2>
         <p class="text-center text-gray-600 mb-8">Drop us a message to check availability or ask questions.</p>
         <form action="https://formspree.io/f/xpqebrly" method="POST" class="space-y-4">
-    <div>
-        <label class="block text-sm font-semibold mb-1">Your Name</label>
-        <input type="text" name="name" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-amber-600" required>
-    </div>
-    <div>
-        <label class="block text-sm font-semibold mb-1">Email Address</label>
-        <input type="email" name="email" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-amber-600" required>
-    </div>
-    <div>
-        <label class="block text-sm font-semibold mb-1">Message / Dates Requested</label>
-        <textarea name="message" rows="4" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-amber-600" required></textarea>
-    </div>
+   <div>
+                <label class="block text-sm font-semibold mb-1">Your Name</label>
+                <input type="text" name="name" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-amber-600 bg-white" required>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-1">Email Address</label>
+                <input type="email" name="email" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-amber-600 bg-white" required>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-1">Type of Reservation</label>
+                <select name="accommodation_type" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-amber-600 bg-white" required>
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="Luxury Tents">Luxury Tents</option>
+                    <option value="Standard Tents">Standard Tents</option>
+                    <option value="Bush Camping">Bush Camping</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-1">Number of Days You Reserve</label>
+                <input type="number" name="stay_duration" min="1" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-amber-600 bg-white" required hidden-arrow>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-1">Message</label>
+                <textarea name="message" rows="4" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-amber-600 bg-white" placeholder="Any special requests or details..." required></textarea>
+            </div>
     <button type="submit" class="w-full bg-amber-600 text-white font-bold py-3 rounded hover:bg-amber-700 transition shadow">Send Inquiry</button>
 </form>
     </section>
